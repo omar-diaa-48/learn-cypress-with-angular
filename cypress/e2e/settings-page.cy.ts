@@ -19,4 +19,13 @@ describe('should render settings page', () => {
 
     cy.get('form').find('button').should('be.disabled');
   })
+
+  it('should render an enabled submit button with valid input (name and email)', () => {
+    cy.visit('/settings')
+
+    cy.get('#name').type(validName);
+    cy.get('#email').type(validEmail);
+
+    cy.get('form').find('button').should('be.enabled');
+  })
 })
