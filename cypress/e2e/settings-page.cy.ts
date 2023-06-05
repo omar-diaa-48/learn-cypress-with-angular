@@ -4,15 +4,15 @@ const validEmail = 'omar@gmail';
 const nonValidName = 'o';
 const nonValidEmail = 'omargmail';
 
-describe('should render settings page', () => {
-  it('should render settings page', () => {
-    cy.visit('/settings')
+describe('should render profile page', () => {
+  it('should render profile page', () => {
+    cy.visit('/profile')
 
-    cy.get('p').first().contains('settings')
+    cy.get('p').first().contains('profile')
   })
 
   it('should render a disabled submit button with invalid input (name and email)', () => {
-    cy.visit('/settings')
+    cy.visit('/profile')
 
     cy.get('#name').type(nonValidName);
     cy.get('#email').type(nonValidEmail);
@@ -21,7 +21,7 @@ describe('should render settings page', () => {
   })
 
   it('should render an enabled submit button with valid input (name and email)', () => {
-    cy.visit('/settings')
+    cy.visit('/profile')
 
     cy.get('#name').type(validName);
     cy.get('#email').type(validEmail);

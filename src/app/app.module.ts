@@ -5,15 +5,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SettingsComponent } from './pages/settings/settings.component';
-import { SettingsFormComponent } from './pages/settings/components/settings-form/settings-form.component';
+import { ProfileComponent } from './pages/settings/profile.component';
+import { ProfileFormComponent } from './pages/settings/components/profile-form/profile-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SettingsComponent,
-    SettingsFormComponent
+    ProfileComponent,
+    ProfileFormComponent
   ],
   imports: [
     BrowserModule,
