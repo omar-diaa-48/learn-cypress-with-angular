@@ -7,7 +7,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: '*', redirectTo: '/home' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
