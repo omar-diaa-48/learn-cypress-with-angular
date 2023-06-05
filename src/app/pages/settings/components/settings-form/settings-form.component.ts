@@ -11,7 +11,7 @@ export class SettingsFormComponent {
 
   constructor(private fb: FormBuilder) {
     this.settingsForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.min(2)]],
       email: ['', [Validators.required, Validators.email]],
     });
   }

@@ -1,12 +1,12 @@
 <form [formGroup]="settingsForm" (submit)="submitForm()">
   <label>
     Name:
-    <input required type="text" formControlName="name">
+    <input id="name" required type="text" formControlName="name">
   </label>
   <br>
   <label>
     Email:
-    <input required type="email" formControlName="email">
+    <input id="email" required type="email" formControlName="email">
   </label>
   <br>
   <button type="submit" [disabled]="settingsForm.invalid">Submit</button>
